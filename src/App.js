@@ -47,7 +47,7 @@ function App() {
     <div className="App">
       <div className="calculator">
         <div className="display">
-          { result ? <span>({result})</span> : ''}&nbsp;{calc || '0'}
+          { result ? <span>= {result}</span> : ''}&nbsp;{calc || '0'}
         </div>
         <div className="operators">
           <button onClick={()=> updateCalc('/')}>/</button>
@@ -58,8 +58,8 @@ function App() {
         </div>
         <div className="digits">
           { createDigits() }
-          <button onClick={()=> updateCalc('0')}>0</button>
           <button onClick={()=> updateCalc('.')}>.</button>
+          <button onClick={()=> updateCalc('0')}>0</button>
           <button onClick={calculate}>=</button>
         </div>
       </div>
